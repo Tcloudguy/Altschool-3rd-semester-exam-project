@@ -26,7 +26,6 @@ pipeline {
                         sh "kubectl create -f sock-shop-app/"
                         sh "kubectl create -f web-page/"
                         sh "kubectl create -f monitoring-stack"
-                        sh "kubectl create -f alerting-stack"
                     }
                 }
             }

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-web-app
-        image: suleimanjr1/my-personal-webapp:1.1
+        image: tcloudguy/mywebapp:1.0
         ports:
         - name: web
           containerPort: 80

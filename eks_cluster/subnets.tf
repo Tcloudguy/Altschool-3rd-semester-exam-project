@@ -6,7 +6,7 @@ resource "aws_subnet" "private-eu-west-3" {
   tags = {
     "Name"                            = "private-eu-west-3"
     "kubernetes.io/role/internal-elb" = "1"
-    "kubernetes.io/cluster/demo"      = "owned"
+    "kubernetes.io/cluster/cicd-cluster"      = "owned"
   }
 }
 
@@ -18,7 +18,7 @@ resource "aws_subnet" "private-eu-west-3" {
   tags = {
     "Name"                            = "private-eu-west-3"
     "kubernetes.io/role/internal-elb" = "1"
-    "kubernetes.io/cluster/demo"      = "owned"
+    "kubernetes.io/cluster/cicd-cluster"      = "owned"
   }
 }
 
@@ -31,7 +31,7 @@ resource "aws_subnet" "public-eu-west-3" {
   tags = {
     "Name"                       = "public-eu-west-3"
     "kubernetes.io/role/elb"     = "1"
-    "kubernetes.io/cluster/demo" = "owned"
+    "kubernetes.io/cluster/cicd-cluster" = "owned"
   }
 }
 
@@ -44,6 +44,6 @@ resource "aws_subnet" "public-eu-west-3" {
   tags = {
     "Name"                       = "public-eu-west-3"
     "kubernetes.io/role/elb"     = "1"
-    "kubernetes.io/cluster/demo" = "owned"
+    "kubernetes.io/cluster/cicd-cluster" = "owned"
   }
 }
