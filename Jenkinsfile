@@ -12,20 +12,7 @@ pipeline {
             steps {
                 script {
                     dir('eks-cluster') {
-                        sh "terraform init"
-                        sh "terraform apply --auto-approve"
-                    }
-                }
-            }
-        }
-        stage("Deploying sock-shop-app microservice, webpage and a Monitoring system to EKS") {
-            steps {
-                script {
-                    dir('k8s') {
-                        sh "aws eks --region eu-west-3 update-kubeconfig --name cicd-cluster"
-                        sh "kubectl create -f sock-shop-app/"
-                        sh "kubectl create -f web-page/"
-                        sh "kubectl create -f monitoring-stack"
+                        sh "terraform destroy --auto-approve"
                     }
                 }
             }
